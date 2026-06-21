@@ -229,6 +229,7 @@ jobs:
               set -e
               
               # 确保 Ubuntu 宿主环境有所有依赖
+              rm -f /etc/apt/sources.list.d/*kitware*
               apt-get update && apt-get install -y build-essential clang binutils-aarch64-linux-gnu
           
               # 动态获取 Alpine 最新 OpenSSL 版本号
