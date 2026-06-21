@@ -1,4 +1,4 @@
-﻿namespace N_m3u8DL_RE.Common.Resource;
+namespace N_m3u8DL_RE.Common.Resource;
 
 internal static class StaticText
 {
@@ -201,6 +201,12 @@ internal static class StaticText
             zhCN: "使用 ffmpeg 合并时，使用 concat 分离器而非 concat 协议",
             zhTW: "使用 ffmpeg 合併時，使用 concat 分離器而非 concat 協議",
             enUS: "When merging with ffmpeg, use the concat demuxer instead of the concat protocol"
+        ),
+        ["cmd_faststart"] = new TextContainer
+        (
+            zhCN: "合并为MP4并使用faststart进行优化以支持边下边播",
+            zhTW: "合併為MP4並使用faststart進行優化以支援邊下邊播",
+            enUS: "Merge to MP4 and optimize with faststart to enable progressive playback"
         ),
         ["cmd_checkSegmentsCount"] = new TextContainer
         (

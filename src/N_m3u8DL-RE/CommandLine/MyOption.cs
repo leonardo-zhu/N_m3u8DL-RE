@@ -1,4 +1,4 @@
-﻿using N_m3u8DL_RE.Common.Enum;
+using N_m3u8DL_RE.Common.Enum;
 using N_m3u8DL_RE.Common.Log;
 using N_m3u8DL_RE.Entity;
 using N_m3u8DL_RE.Enum;
@@ -108,6 +108,10 @@ internal class MyOption
     /// See: <see cref="CommandInvoker.UseFFmpegConcatDemuxer"/>.
     /// </summary>
     public bool UseFFmpegConcatDemuxer { get; set; }
+    /// <summary>
+    /// See: <see cref="CommandInvoker.FastStart"/>.
+    /// </summary>
+    public bool FastStart { get; set; }
     /// <summary>
     /// See: <see cref="CommandInvoker.DelAfterDone"/>.
     /// </summary>

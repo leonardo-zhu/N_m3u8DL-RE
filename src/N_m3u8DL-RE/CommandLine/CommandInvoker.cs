@@ -53,6 +53,7 @@ internal static partial class CommandInvoker
     private static readonly Option<bool> NoDateInfo = new Option<bool>("--no-date-info") { Description = ResString.cmd_noDateInfo }.WithDefault(false);
     private static readonly Option<bool> BinaryMerge = new Option<bool>("--binary-merge") { Description = ResString.cmd_binaryMerge }.WithDefault(false);
     private static readonly Option<bool> UseFFmpegConcatDemuxer = new Option<bool>("--use-ffmpeg-concat-demuxer") { Description = ResString.cmd_useFFmpegConcatDemuxer }.WithDefault(false);
+    private static readonly Option<bool> FastStart = new Option<bool>("--faststart") { Description = ResString.cmd_faststart }.WithDefault(false);
     private static readonly Option<bool> DelAfterDone = new Option<bool>("--del-after-done") { Description = ResString.cmd_delAfterDone }.WithDefault(true);
     private static readonly Option<bool> AutoSubtitleFix = new Option<bool>("--auto-subtitle-fix") { Description = ResString.cmd_subtitleFix }.WithDefault(true);
     private static readonly Option<bool> CheckSegmentsCount = new Option<bool>("--check-segments-count") { Description = ResString.cmd_checkSegmentsCount }.WithDefault(true);
@@ -621,6 +622,7 @@ internal static partial class CommandInvoker
             SkipMerge = result.GetValue(SkipMerge),
             BinaryMerge = result.GetValue(BinaryMerge),
             UseFFmpegConcatDemuxer = result.GetValue(UseFFmpegConcatDemuxer),
+            FastStart = result.GetValue(FastStart),
             DelAfterDone = result.GetValue(DelAfterDone),
             AutoSubtitleFix = result.GetValue(AutoSubtitleFix),
             CheckSegmentsCount = result.GetValue(CheckSegmentsCount),
@@ -726,7 +728,7 @@ internal static partial class CommandInvoker
         var rootCommand = new RootCommand(VERSION_INFO)
         {
             Input, TmpDir, SaveDir, SaveName, SavePattern, LogFilePath, BaseUrl, ThreadCount, DownloadRetryCount, HttpRequestTimeout, ForceAnsiConsole, NoAnsiColor,AutoSelect, SkipMerge, SkipDownload, CheckSegmentsCount,
-            BinaryMerge, UseFFmpegConcatDemuxer, DelAfterDone, NoDateInfo, NoLog, WriteMetaJson, AppendUrlParams, ConcurrentDownload, Headers, SubOnly, SubtitleFormat, AutoSubtitleFix,
+            BinaryMerge, UseFFmpegConcatDemuxer, FastStart, DelAfterDone, NoDateInfo, NoLog, WriteMetaJson, AppendUrlParams, ConcurrentDownload, Headers, SubOnly, SubtitleFormat, AutoSubtitleFix,
             FFmpegBinaryPath,
             LogLevel, UILanguage, UrlProcessorArgs, Keys, KeyTextFile, DecryptionEngine, DecryptionBinaryPath, UseShakaPackager, MP4RealTimeDecryption,
             MaxSpeed,

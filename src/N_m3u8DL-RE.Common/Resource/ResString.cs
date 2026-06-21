@@ -1,4 +1,4 @@
-﻿namespace N_m3u8DL_RE.Common.Resource;
+namespace N_m3u8DL_RE.Common.Resource;
 
 public static class ResString
 {
@@ -26,6 +26,7 @@ public static class ResString
     public static string cmd_autoSelect => GetText("cmd_autoSelect");
     public static string cmd_disableUpdateCheck => GetText("cmd_disableUpdateCheck");
     public static string cmd_binaryMerge => GetText("cmd_binaryMerge");
+    public static string cmd_faststart => GetText("cmd_faststart");
     public static string cmd_useFFmpegConcatDemuxer => GetText("cmd_useFFmpegConcatDemuxer");
     public static string cmd_checkSegmentsCount => GetText("cmd_checkSegmentsCount");
     public static string cmd_decryptionBinaryPath => GetText("cmd_decryptionBinaryPath");
